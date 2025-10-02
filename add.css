@@ -263,9 +263,9 @@ color: teal;
   text-align: center;
 }
 
-.right-boxes {
+/* .right-boxes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);  //scroll
   grid-auto-rows: 120px;          
   gap: 200px;                     
   
@@ -276,8 +276,13 @@ color: teal;
 
 .right-boxes::-webkit-scrollbar {
   display: none;                  
+} */
+.right-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, 120px);  /* 2 rows */
+  gap: 200px;                                /* No gap between boxes */
 }
-
 
 
 .flip-box {
