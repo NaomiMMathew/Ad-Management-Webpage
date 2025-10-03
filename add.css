@@ -108,8 +108,16 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* Moving Icons Section */
+
+.right-section0{
+  width: 1000px; /* adjust width as needed */
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
 .moving-icons {
-  background:darkgray;
+  background:#333;
   padding: 30px 0;
   overflow: hidden;
   position: relative;
@@ -123,7 +131,7 @@ a { text-decoration: none; color: inherit; }
 
 .icons-slider img {
   height: 50px;
-  margin: 0 40px;
+  margin: 0 15px;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
@@ -148,7 +156,8 @@ a { text-decoration: none; color: inherit; }
 }
 .image-content {
   padding: 80px 60px;
-  background: #f9f9f9;
+background-color:#f4f4f4;
+
 }
 
 .image-content .container {
@@ -210,16 +219,16 @@ color: teal;
   background: #006666;
 }
 
-/* list */
+
 .custom-list {
-  list-style: none; /* remove default bullets */
+  list-style: none; 
   padding: 0;
   margin: 0;
 }
 
 .custom-list li {
   position: relative;
-  padding-left: 40px;   /* space for circle */
+  padding-left: 40px;   
   margin-bottom: 15px;
   font-size: 18px;
   color: #333;
@@ -243,6 +252,186 @@ color: teal;
   font-weight: bold;
 }
 
+
+
+ /* Wrapper: makes list and button side by side */
+.list-with-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* keeps list left, button right */
+  gap: 20px;
+}
+
+/* Custom list */
+.custom-list {
+  margin: 0;
+  padding-left: 20px;
+}
+.circle-btn-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center text below button */
+  gap: 8px; /* spacing between button and text */
+}
+
+/* Circular button */
+.circle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: teal;   /* button color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;              /* text/icon color */
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  
+  /* Pulse animation */
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 0 0 rgba(0, 128, 128, 0.6);
+}
+
+/* Pulse Effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(74, 77, 77, 0.6);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(123, 124, 121, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 128, 128, 0);
+  }
+}
+.circle-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 0;
+  
+}
+
+/* Flex wrapper for button + profile */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space around items */
+}
+
+/* Separator line */
+.separator {
+  width: 1px;
+  height: 50px;       
+  background-color:black; 
+}
+
+/* Profile block */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Profile text */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 20px;
+}
+
+.profile-role {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+
+
+
+/* Right section with marquee */
+
+.right{
+background-color:#f4f4f4;
+}
+/* Right section with marquee */
+.right-section {
+  width:2000px; 
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}  
+
+/* Marquee text */
+ .marquee {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-size: 25px;
+  font-weight: bold;
+  color: teal;
+  animation: scroll-left 15s linear infinite;
+} 
+
+@keyframes scroll-left {
+  0% {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    left: -100%;
+    transform: translateX(0) translateY(-50%);
+  }
+}
+
+
+
+/* content */
+.flip{
+background-color:#f4f4f4;
+}
+.content0{
+ background:lightblue;
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  margin-right: 150px; 
+  width: max-content;
+
+}
+.content1{
+  background: #009999;
+  display: block;
+  padding: 5px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: white;
+  margin-right: 278px;      
+  
+}
+
 /* flip boxes..... */
 .flip-section .container {
   display: flex;
@@ -258,56 +447,54 @@ color: teal;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: justify;
+  justify-content: justify;
+  text-align: justify;
 }
 
-/* .right-boxes {
+.right-boxes {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);  //scroll
-  grid-auto-rows: 120px;          
-  gap: 200px;                     
-  
-  max-height: 400px;              
-  overflow-y: scroll;            
-  scrollbar-width: none;         
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+  scroll-snap-type: y mandatory;
 }
+
+
 
 .right-boxes::-webkit-scrollbar {
   display: none;                  
-} */
-.right-boxes {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 3 columns */
-  grid-template-rows: repeat(3, 120px);  /* 2 rows */
-  gap: 200px;                                /* No gap between boxes */
 }
 
 
 .flip-box {
-  width: 150px;
-  height: 150px;
-  perspective: 1000px;
-  scroll-snap-align: start; 
+  width: 250px;
+  height: 250px;
+  perspective: 1200px;
+  position: relative;
 }
 
 
 
-.flip-box {
+flip-box {
   width: 100px;
   height: 100px;
   perspective: 1000px;
  
-}
+} 
+
 
 .flip-box-inner {
   position: relative;
-  width: 250%;
-  height: 250%;
-  transition: transform 0.8s;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
   transform-style: preserve-3d;
+ 
 }
+
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
@@ -317,19 +504,22 @@ color: teal;
 .flip-box-front, .flip-box-back {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100%; 
   border-radius: 30px;
   backface-visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  border: 1px solid #ccc;
+   background-color: white; 
+  /* border: 1px solid #ccc; */
   padding: 5px;
   text-align: center;        /* Center text */
   word-wrap: break-word;     /* Wrap long words */
   overflow: hidden;          /* Hide overflowing content */
   font-size: 14px;           /* Fit text nicely inside */
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+   
+
 }
 
 
@@ -349,6 +539,86 @@ color: teal;
   display: inline-block;
   font-size: clamp(10px, 2vw, 16px); /* Text shrinks when box shrinks */
 }
+
+
+/* next section */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full viewport height */
+  gap: 50px; /* space between sections */
+  
+}
+
+/* Left section content */
+.left-section {
+  text-align: center;
+}
+
+
+/* Container layout */
+.brands-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* Left content */
+.brands-logos {
+  flex: 1;
+  max-width: 600px;
+}
+
+.brands-logos h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: teal;
+}
+
+.brands-logos p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Right marquee container */
+/* .right-section {
+  flex: 1;
+  max-width: 400px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+} */
+
+/* Marquee text */
+/* .marquee {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 25px;
+  font-weight: bold;
+  color: teal;
+  animation: scroll-left 10s linear infinite;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+} */
+
+
+
+
 
 
 
@@ -394,13 +664,6 @@ input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
 /* Footer */
 .footer { padding: 30px; text-align: center; background: #333; color: #fff; }
 .footer-links a { margin: 0 10px; color: #fff; }
-
-.marquee-section {
-  background: #fff;
-  padding: 20px 0;
-  text-align: center;
-  overflow: hidden;
-}
 
 
 
